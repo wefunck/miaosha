@@ -64,10 +64,11 @@ public class UserController extends BaseController{
 
     private String encodeByMd5(String str) throws NoSuchAlgorithmException, UnsupportedEncodingException {
         //确定计算方法
+        //1.获取MessageDigest对象
         MessageDigest md5 = MessageDigest.getInstance("MD5");
         BASE64Encoder base64Encoder = new BASE64Encoder();
         //加密字符串
-        String newStr = base64Encoder.encode(md5.digest(str.getBytes(str)));
+        String newStr = base64Encoder.encode(md5.digest(str.getBytes()));
         return newStr;
     }
 

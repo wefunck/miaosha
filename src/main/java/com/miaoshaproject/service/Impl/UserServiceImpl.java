@@ -40,8 +40,8 @@ public class UserServiceImpl implements UserService {
         if(userModel == null) {
             throw new BusinessException(EmBusinessError.PARAMETER_VALIDATION_ERROR);
         }
-        if(StringUtils.isNotEmpty(userModel.getName())||
-                StringUtils.isNotEmpty(userModel.getTelephone())||
+        if(StringUtils.isEmpty(userModel.getName())||
+                StringUtils.isEmpty(userModel.getTelephone())||
                 userModel.getAge() == null||
                 userModel.getGender() == null){
             throw new BusinessException(EmBusinessError.PARAMETER_VALIDATION_ERROR);
@@ -53,6 +53,8 @@ public class UserServiceImpl implements UserService {
         }catch (DuplicateKeyException e){
             throw new BusinessException(EmBusinessError.PARAMETER_VALIDATION_ERROR,"手机号已重复注册");
         }
+        //在mybatis设置keyProperties将自增id取出来，放到model中，从而实现自增id外键关联
+        userModel.setId(userDO.getId());
 
         UserPasswordDO userPasswordDO = convertPasswordFromModel(userModel);
         userPasswordDOMapper.insertSelective(userPasswordDO);
@@ -65,6 +67,7 @@ public class UserServiceImpl implements UserService {
         }
         UserPasswordDO userPasswordDO = new UserPasswordDO();
         userPasswordDO.setEncrptPassword(userModel.getEncrptPassword());
+        userPasswordDO.setUserId(userModel.getId());
         return userPasswordDO;
     }
 
