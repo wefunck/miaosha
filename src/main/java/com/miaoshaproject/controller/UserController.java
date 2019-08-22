@@ -34,10 +34,32 @@ public class UserController extends BaseController{
     @Autowired
     private HttpServletRequest httpServletRequest;
 
+    //实现用户登录接口
+    @RequestMapping(value = "/login",method ={RequestMethod.POST},consumes = {CONTENT_TYPE_FORMED})
+    @ResponseBody
+    public CommonReturnType login(@RequestParam(name = "telephone")String telephone,
+                                  @RequestParam(name = "password")String password) throws BusinessException, UnsupportedEncodingException, NoSuchAlgorithmException {
+        //验证手机号码是否存在(入参校验)
+        if(org.apache.commons.lang3.StringUtils.isEmpty(telephone)||
+                org.apache.commons.lang3.StringUtils.isEmpty(password)) {
+            throw new BusinessException(EmBusinessError.PARAMETER_VALIDATION_ERROR);
+        }
+        //用户登录接口，用来校验用户登录是否合法
+        UserModel userModel = userService.validateLogin(telephone,this.encodeByMd5(password));
+
+        //将登录凭证加入到用户登录成功的session内
+        this.httpServletRequest.getSession().setAttribute("IS_LOGIN",true);//指定一个特殊的key
+        this.httpServletRequest.getSession().setAttribute("LOGIN_USER",userModel);//返回给前端
+
+        return CommonReturnType.create(null);
+    }
+
+
+
     //实现用户注册接口
     @RequestMapping(value = "/register",method ={RequestMethod.POST},consumes = {CONTENT_TYPE_FORMED})
     @ResponseBody
-    public CommonReturnType register(@RequestParam(name = "telephone")String telephone,
+    public CommonReturnType  egister(@RequestParam(name = "telephone")String telephone,
                                      @RequestParam(name = "otpCode")String otpCode,
                                      @RequestParam(name = "name")String name,
                                      @RequestParam(name = "gender")Integer gender,

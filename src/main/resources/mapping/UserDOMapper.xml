@@ -34,6 +34,22 @@
     from user_info
     where id = #{id,jdbcType=INTEGER}
   </select>
+
+<!--  按照手机号码查找-->
+  <select id="selectByTelephone" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from user_info
+    where telephone = #{telephone,jdbcType=VARCHAR}
+  </select>
+
+
+
+
+
+
+
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     <!--
       WARNING - @mbg.generated
