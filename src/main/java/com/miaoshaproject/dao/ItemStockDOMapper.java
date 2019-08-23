@@ -1,9 +1,7 @@
 package com.miaoshaproject.dao;
 
 import com.miaoshaproject.pojo.ItemStockDO;
-import org.springframework.stereotype.Repository;
 
-@Repository
 public interface ItemStockDOMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -16,4 +14,6 @@ public interface ItemStockDOMapper {
     int updateByPrimaryKeySelective(ItemStockDO record);
 
     int updateByPrimaryKey(ItemStockDO record);
+
+    ItemStockDO selectByItemId(Integer itemId);
 }

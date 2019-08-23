@@ -1,16 +1,23 @@
-package com.miaoshaproject.pojo;
+package com.miaoshaproject.controller.viewobject;
 
-public class ItemDO {
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import java.math.BigDecimal;
+
+public class ItemVO {
     private Integer id;
-
+    //商品名称
     private String title;
-
-    private Double price;
-
+    //商品价格
+    private BigDecimal price;
+    //商品库存
+    private Integer stock;
+    //商品描述
     private String description;
-
+    //商品销量
     private Integer sales;
-
+    //商品描述图片的url
     private String imgurl;
 
     public Integer getId() {
@@ -26,15 +33,23 @@ public class ItemDO {
     }
 
     public void setTitle(String title) {
-        this.title = title == null ? null : title.trim();
+        this.title = title;
     }
 
-    public Double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+
+    public Integer getStock() {
+        return stock;
+    }
+
+    public void setStock(Integer stock) {
+        this.stock = stock;
     }
 
     public String getDescription() {
@@ -42,7 +57,7 @@ public class ItemDO {
     }
 
     public void setDescription(String description) {
-        this.description = description == null ? null : description.trim();
+        this.description = description;
     }
 
     public Integer getSales() {
@@ -58,6 +73,6 @@ public class ItemDO {
     }
 
     public void setImgurl(String imgurl) {
-        this.imgurl = imgurl == null ? null : imgurl.trim();
+        this.imgurl = imgurl;
     }
 }

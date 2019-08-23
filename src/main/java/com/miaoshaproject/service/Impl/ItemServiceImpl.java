@@ -12,7 +12,6 @@ import com.miaoshaproject.validator.ValidationResult;
 import com.miaoshaproject.validator.ValidatorImpl;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -91,6 +90,27 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public ItemModel getItemById(Integer id) {
-        return null;
+        //调用ItemDOMapper查找itemDO
+        ItemDO itemDO = itemDOMapper.selectByPrimaryKey(id);
+        if(itemDO == null){
+            return null;
+        }
+        ItemStockDO itemStockDO = itemStockDOMapper.selectByItemId(itemDO.getId());
+        return convertFromDataObject(itemDO,itemStockDO);
+    }
+
+    private ItemModel convertFromDataObject(ItemDO itemDO, ItemStockDO itemStockDO){
+        if(itemDO == null){
+            return null;
+        }
+        ItemModel itemModel = new ItemModel();
+        BeanUtils.copyProperties(itemDO,itemModel);
+        itemModel.setPrice(new BigDecimal(itemDO.getPrice()));//价格精度
+
+        if(itemStockDO != null){
+            itemModel.setStock(itemStockDO.getStock());
+        }
+
+        return itemModel;
     }
 }
