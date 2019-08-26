@@ -67,7 +67,7 @@ public class ItemController extends BaseController{
     }
 
     //商品列表页面浏览
-    @RequestMapping(value = "/list",method ={RequestMethod.GET})
+    @RequestMapping(value = "/listitem",method ={RequestMethod.GET})
     @ResponseBody
     public CommonReturnType listItem(){
         //使用stream api将list中的itemModel转化为itemVO

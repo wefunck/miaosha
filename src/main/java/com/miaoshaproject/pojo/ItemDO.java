@@ -11,6 +11,8 @@ public class ItemDO {
 
     private Integer sales;
 
+
+
     private String imgurl;
 
     public Integer getId() {
@@ -58,6 +60,6 @@ public class ItemDO {
     }
 
     public void setImgurl(String imgurl) {
-        this.imgurl = imgurl == null ? null : imgurl.trim();
+        this.imgurl = imgurl;
     }
 }
