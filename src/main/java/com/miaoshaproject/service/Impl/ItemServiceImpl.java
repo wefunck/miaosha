@@ -105,6 +105,14 @@ public class ItemServiceImpl implements ItemService {
         ItemStockDO itemStockDO = itemStockDOMapper.selectByItemId(itemDO.getId());
         return convertFromDataObject(itemDO,itemStockDO);
     }
+    //减库存操作
+    @Override
+    @Transactional
+    public boolean decreaseStock(Integer itemId, Integer amount) throws BusinessException {
+        int affectedRow = itemStockDOMapper.decreaseStock(itemId,amount);
+
+        return  affectedRow > 0 ? true:false;
+    }
 
     private ItemModel convertFromDataObject(ItemDO itemDO, ItemStockDO itemStockDO){
         if(itemDO == null){
