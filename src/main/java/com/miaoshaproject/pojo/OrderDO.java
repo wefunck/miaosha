@@ -15,6 +15,16 @@ public class OrderDO {
 
     private BigDecimal orderPrice;
 
+    private Integer promoId;
+
+    public Integer getPromoId() {
+        return promoId;
+    }
+
+    public void setPromoId(Integer promoId) {
+        this.promoId = promoId;
+    }
+
     public String getId() {
         return id;
     }

@@ -26,7 +26,8 @@ public class OrderController extends BaseController{
     //封装下单信息
     @RequestMapping(value =  "/createorder",method ={RequestMethod.POST},consumes = {CONTENT_TYPE_FORMED})
     @ResponseBody
-    public CommonReturnType  createOrder(@RequestParam(name = "itemId")Integer itemId, @RequestParam(name = "amount")Integer amount) throws BusinessException {
+    public CommonReturnType  createOrder(@RequestParam(name = "itemId")Integer itemId, @RequestParam(name = "amount")Integer amount
+                                        ,@RequestParam(name = "promoId",required = false)Integer promoId) throws BusinessException {
         Boolean isLogin = (Boolean) httpServletRequest.getSession().getAttribute("IS_LOGIN");
         if(isLogin == null || !isLogin.booleanValue()){
             throw new BusinessException(EmBusinessError.USER_NOT_LOGIN);
@@ -37,7 +38,7 @@ public class OrderController extends BaseController{
             throw new BusinessException(EmBusinessError.PARAMETER_VALIDATION_ERROR,"无法获取登陆用户信息");
         }
 
-        OrderModel orderModel = orderService.createOrder(userModel.getId(),itemId,amount);
+        OrderModel orderModel = orderService.createOrder(userModel.getId(),itemId,amount,promoId);
 
         return CommonReturnType.create(null);
 

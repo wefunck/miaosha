@@ -65,11 +65,15 @@
                <!--selectByExampleQueryId="false">-->
         <!--</table>-->
 
-        <table schema="miaosha" tableName="sequence_info" domainObjectName="SequenceDO"  enableCountByExample="false"
+        <!--<table schema="miaosha" tableName="sequence_info" domainObjectName="SequenceDO"  enableCountByExample="false"-->
+               <!--enableSelectByExample="false" enableDeleteByExample="false" enableUpdateByExample="false"-->
+               <!--selectByExampleQueryId="false">-->
+        <!--</table>-->
+
+        <table schema="miaosha" tableName="promo" domainObjectName="PromoDO"  enableCountByExample="false"
                enableSelectByExample="false" enableDeleteByExample="false" enableUpdateByExample="false"
                selectByExampleQueryId="false">
         </table>
-
 
     </context>
 </generatorConfiguration>
