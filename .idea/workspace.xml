@@ -507,7 +507,7 @@
     <property name="SearchEverywhereHistoryKey" value="cont&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/java/com/miaoshaproject/controller/OrderController.java&#10;impl&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/java/com/miaoshaproject/service/Impl/OrderServiceImpl.java&#10;orderser&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/java/com/miaoshaproject/service/OrderService.java&#10;xml&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/resources/mapping/OrderDOMapper.xml&#10;orderM&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/java/com/miaoshaproject/dao/OrderDOMapper.java&#10;OrderDo&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/java/com/miaoshaproject/pojo/OrderDO.java&#10;item&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/java/com/miaoshaproject/controller/ItemController.java&#10;model&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/java/com/miaoshaproject/service/model/PromoModel.java&#10;itemC&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/java/com/miaoshaproject/controller/ItemController.java&#10;promom&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/java/com/miaoshaproject/service/model/PromoModel.java&#10;itemVo&#9;PSI&#9;JAVA://com.miaoshaproject.controller.viewobject.ItemVO&#10;ser&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/java/com/miaoshaproject/service/Impl/PromoServiceImpl.java&#10;itemser&#9;PSI&#9;JAVA://com.miaoshaproject.service.ItemService&#10;insert&#9;PSI&#9;JAVA://com.alibaba.druid.sql.visitor.functions.Insert&#10;mapper&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/resources/mapping/PromoDOMapper.xml&#10;Pro&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/java/com/miaoshaproject/service/model/PromoModel.java&#10;im&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/java/com/miaoshaproject/service/Impl/PromoServiceImpl.java&#10;xm&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/resources/mapping/PromoDOMapper.xml&#10;po&#9;FILE&#9;file://D:/SSMProject/miaosha/pom.xml&#10;orderS&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/java/com/miaoshaproject/service/Impl/OrderServiceImpl.java&#10;itemDo&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/java/com/miaoshaproject/dao/ItemDOMapper.java&#10;itemsdomapp&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/resources/mapping/ItemStockDOMapper.xml&#10;imp&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/java/com/miaoshaproject/service/Impl/OrderServiceImpl.java&#10;service&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/java/com/miaoshaproject/service/OrderService.java&#10;em&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/java/com/miaoshaproject/error/EmBusinessError.java&#10;order&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/java/com/miaoshaproject/controller/OrderController.java&#10;user&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/java/com/miaoshaproject/controller/UserController.java&#10;orderCo&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/java/com/miaoshaproject/controller/OrderController.java&#10;userCon&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/java/com/miaoshaproject/controller/UserController.java&#10;items&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/java/com/miaoshaproject/dao/ItemStockDOMapper.java&#10;mapper.xml&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/resources/mapping/ItemStockDOMapper.xml&#10;Order&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/resources/mapping/OrderDOMapper.xml&#10;do&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/java/com/miaoshaproject/pojo/ItemDO.java&#10;itemSer&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/java/com/miaoshaproject/service/Impl/ItemServiceImpl.java&#10;mapper.&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/resources/mapping/ItemDOMapper.xml&#10;itemmapp&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/java/com/miaoshaproject/dao/ItemStockDOMapper.java&#10;list&#9;null&#9;null&#10;Embu&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/java/com/miaoshaproject/error/EmBusinessError.java&#10;con&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/java/com/miaoshaproject/controller/ItemController.java&#10;itemDomap&#9;FILE&#9;file://D:/SSMProject/miaosha/src/main/java/com/miaoshaproject/dao/ItemDOMapper.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566983769062" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566983802654" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -599,7 +599,7 @@
       <workItem from="1566543813594" duration="12072000" />
       <workItem from="1566652963979" duration="8781000" />
       <workItem from="1566799381049" duration="11114000" />
-      <workItem from="1566968117951" duration="14909000" />
+      <workItem from="1566968117951" duration="15553000" />
     </task>
     <task id="LOCAL-00001" summary="create a remote test git responsitory">
       <created>1565863301053</created>
@@ -619,7 +619,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119863000" />
+    <option name="totallyTimeSpent" value="120507000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -632,10 +632,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49452955" visible="true" weight="0.2580429" />
-      <window_info id="Structure" order="1" sideWeight="0.50547045" side_tool="true" weight="0.18565683" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49159664" visible="true" weight="0.2580429" />
+      <window_info id="Structure" order="1" sideWeight="0.50840336" side_tool="true" visible="true" weight="0.2580429" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
@@ -645,12 +644,12 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.21585903" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.19089574" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.35389134" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32844576" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32892805" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3010279" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3010279" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" weight="0.3442623" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32892805" />
