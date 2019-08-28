@@ -114,6 +114,13 @@ public class ItemServiceImpl implements ItemService {
         return  affectedRow > 0 ? true:false;
     }
 
+    @Override
+    @Transactional
+    public void increaseSales(Integer itemId, Integer amount) throws BusinessException {
+        itemDOMapper.increaseSales(itemId,amount);
+
+    }
+
     private ItemModel convertFromDataObject(ItemDO itemDO, ItemStockDO itemStockDO){
         if(itemDO == null){
             return null;

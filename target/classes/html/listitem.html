@@ -45,7 +45,7 @@
                 success:function (data) {
                     if (data.status=="success") {
                         g_itemList = data.data;
-                        reloadDom();//
+                        reloadDom();//      
 
                     }else {
                         alert("获取商品信息失败，原因为" + data.data.errMsg);
@@ -57,13 +57,16 @@
             });
             return false;
         });
-    });
-
+  
     function reloadDom(){
         for(var i = 0; i < g_itemList.length; i++){
             var itemVO = g_itemList[i];
-            var dom = "<tr><td>"+itemVO.title+"</td><td><img src='"+itemVO.imgurl+"'></td><td>"+itemVO.description+"</td><td>"+itemVO.price+"</td><td>"+itemVO.stock+"</td><td>"+itemVO.sales>+"</td></tr>";
+            var dom = "<tr data-id='"+itemVO.id+"' id='itemDetail"+itemVO.id+"'><td>"+itemVO.title+"</td><td><img style='width:100px;height:auto;' src='"+itemVO.imgurl+"'/></td><td>"+itemVO.description+"</td><td>"+itemVO.price+"</td><td>"+itemVO.stock+"</td><td>"+itemVO.sales+"</td></tr>";
             $("#container").append($(dom));
+
+            $("#itemDetail"+itemVO.id).on("click",function(e){
+                window.location.href="getitem.html?id="+$(this).data("id");
+            });
         }
     }
 </script>

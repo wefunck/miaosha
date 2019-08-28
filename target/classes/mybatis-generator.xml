@@ -4,6 +4,10 @@
         PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
+
+
+    <!--<classPathEntry location="F:\coding\mavenRep\mysql\mysql-connector-java\8.0.11\mysql-connector-java-8.0.11.jar" />-->
+
     <context id="DB2Tables" targetRuntime="MyBatis3">
 
         <!--        干掉讨厌的注释-->
@@ -11,6 +15,9 @@
             <property name="suppressDate" value="true"/><!--日期注释-->
             <property name="suppressAllComments" value="true"/><!--所有注释-->
         </commentGenerator>
+
+
+
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
                         connectionURL="jdbc:mysql://127.0.0.1:3306/miaosha?characterEncoding=utf-8"
@@ -44,14 +51,25 @@
 <!--               selectByExampleQueryId="false">-->
 <!--        </table>-->
 
-        <table schema="miaosha" tableName="item" domainObjectName="ItemDO"  enableCountByExample="false"
+        <!--<table schema="miaosha" tableName="item" domainObjectName="ItemDO"  enableCountByExample="false"-->
+               <!--enableSelectByExample="false" enableDeleteByExample="false" enableUpdateByExample="false"-->
+               <!--selectByExampleQueryId="false">-->
+        <!--</table>-->
+        <!--<table schema="miaosha" tableName="item_stock" domainObjectName="ItemStockDO"  enableCountByExample="false"-->
+               <!--enableSelectByExample="false" enableDeleteByExample="false" enableUpdateByExample="false"-->
+               <!--selectByExampleQueryId="false">-->
+        <!--</table>-->
+
+        <!--<table schema="miaosha" tableName="order_info" domainObjectName="OrderDO"  enableCountByExample="false"-->
+               <!--enableSelectByExample="false" enableDeleteByExample="false" enableUpdateByExample="false"-->
+               <!--selectByExampleQueryId="false">-->
+        <!--</table>-->
+
+        <table schema="miaosha" tableName="sequence_info" domainObjectName="SequenceDO"  enableCountByExample="false"
                enableSelectByExample="false" enableDeleteByExample="false" enableUpdateByExample="false"
                selectByExampleQueryId="false">
         </table>
-        <table schema="miaosha" tableName="item_stock" domainObjectName="ItemStockDO"  enableCountByExample="false"
-               enableSelectByExample="false" enableDeleteByExample="false" enableUpdateByExample="false"
-               selectByExampleQueryId="false">
-        </table>
+
 
     </context>
 </generatorConfiguration>

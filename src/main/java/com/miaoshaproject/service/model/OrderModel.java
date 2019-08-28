@@ -17,7 +17,7 @@ public class OrderModel {
     //商品单价
     @NotNull
     @Min(value = 0)
-    private BigDecimal price;
+    private BigDecimal itemPrice;
     //订单数量
     @NotNull
     @Min(value = 0)
@@ -49,12 +49,12 @@ public class OrderModel {
         this.itemId = itemId;
     }
 
-    public BigDecimal getPrice() {
-        return price;
+    public BigDecimal getItemPrice() {
+        return itemPrice;
     }
 
-    public void setPrice(BigDecimal price) {
-        this.price = price;
+    public void setItemPrice(BigDecimal itemPrice) {
+        this.itemPrice = itemPrice;
     }
 
     public Integer getAmount() {
